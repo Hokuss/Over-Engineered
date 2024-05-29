@@ -7,7 +7,7 @@ import SearchBar from "./SearchBar";
 const Navbar = ({ toggle }: { toggle: () => void}) => {
     return (
         <>
-            <div className="w-full h-20 bg-emerald-800 sticky top-1 rounded-xl opacity-90">
+            <div className="w-full h-20 bg-emerald-800 sticky top-1 rounded-xl opacity-90 z-50">
                 <div className="mx-auto px-5 h-full">
                     <div className="flex items-center h-full justify-between">
                         {/* Justify between bkc */}

@@ -49,7 +49,7 @@ const Logo = () => {
           display: showButton ? "block" : "none",
         }}
       >
-        <Button />
+        <Button text =""/>
       </div>
     </>
   );
