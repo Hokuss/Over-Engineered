@@ -13,7 +13,7 @@ const Signin = () => {
      </p>
 
      <div className="flex justify-center">
-      <button className="w-5/6 rounded-lg bg-emerald-500 px-5 py-3 text-sm font-medium text-white">
+      <button className="w-5/6 rounded-lg px-5 py-3 text-sm font-medium text-black bg-white">
         Sign in with Google.
       </button>
       </ div>
