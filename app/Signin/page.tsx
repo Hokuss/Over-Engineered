@@ -1,4 +1,6 @@
+"use client"
 import React from "react";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 const Signin = () => {
   return (
@@ -11,12 +13,6 @@ const Signin = () => {
      <p className="mx-auto mt-4 max-w-md text-center text-gray-500">
       To experiene the awesomeness, Signin Now!
      </p>
-
-     <div className="flex justify-center">
-      <button className="w-5/6 rounded-lg px-5 py-3 text-sm font-medium text-black bg-white">
-        Sign in with Google.
-      </button>
-      </ div>
 
       <form action="#" className="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8">
 
@@ -96,6 +92,21 @@ const Signin = () => {
         <a className="underline" href="#">Sign up</a>
       </p>
     </form>
+
+    <div className="relative flex py-5 items-center">
+      <div className="flex-grow border-t border-gray-400"></div>
+      <span className="flex-shrink mx-4 text-gray-400">Or</span>
+      <div className="flex-grow border-t border-gray-400"></div>
+    </div>
+
+    <div className="flex justify-center">
+    <button className="border border-slate-200 dark:border-slate-700 rounded-lg hover:border-slate-400 dark:hover:border-slate-500 hover:shadow transition duration-150 w-5/6 bg-white text-gray-500 hover:text-gray-800 px-4 py-2">
+        <div className="flex justify-center">
+          <img className="w-6 h-6" src="https://www.svgrepo.com/show/475656/google-color.svg" loading="lazy" alt="google logo" />
+          <span className="">Login with Google</span>
+        </div>
+    </button>
+    </div>
   </div>
 </div>
     </div>

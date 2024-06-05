@@ -2,6 +2,7 @@ import Navigation from "./components/navigation";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { Footer } from "./Testing"
+import SeesionWrapper from "./components/session/sessionWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,9 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <SeesionWrapper>
         <Navigation />
         {children}
         <Footer />
+        </SeesionWrapper>
       </body>
     </html>
   );

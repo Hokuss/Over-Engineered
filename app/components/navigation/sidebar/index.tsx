@@ -1,5 +1,7 @@
+"use client";
 import Link from "next/link";
 import Button from "../navbar/button";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 const Sidebar = ({
   isOpen,
@@ -8,6 +10,7 @@ const Sidebar = ({
   isOpen: boolean;
   toggle: () => void;
 }): JSX.Element => {
+  const { data: session } = useSession()
   return (
     <>
       <div

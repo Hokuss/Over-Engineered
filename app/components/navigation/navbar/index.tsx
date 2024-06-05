@@ -1,10 +1,21 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Logo from "./logo";
 import Button from "./button";
 import SearchBar from "./SearchBar";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 const Navbar = ({ toggle }: { toggle: () => void}) => {
+    const { data: session } = useSession()
+    if(session) {
+        return (
+            <>
+                Signed in as {session.user?.id} <br/>
+                <button onClick={()=> signOut()}>Sign Out</button>
+            </>
+        )
+    }
     return (
         <>
             <div className="w-full h-20 bg-emerald-800 sticky top-1 rounded-xl opacity-90 z-50">
