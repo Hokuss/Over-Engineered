@@ -95,15 +95,24 @@ const Signin = () => {
 
     <div className="relative flex py-5 items-center">
       <div className="flex-grow border-t border-gray-400"></div>
-      <span className="flex-shrink mx-4 text-gray-400">Or</span>
+      <span className="flex-shrink mx-4 text-gray-400">OR</span>
       <div className="flex-grow border-t border-gray-400"></div>
     </div>
 
     <div className="flex justify-center">
-    <button className="border border-slate-200 dark:border-slate-700 rounded-lg hover:border-slate-400 dark:hover:border-slate-500 hover:shadow transition duration-150 w-5/6 bg-white text-gray-500 hover:text-gray-800 px-4 py-2">
+    <button className="border border-slate-200 dark:border-slate-700 rounded-lg hover:border-slate-400 dark:hover:border-slate-500 hover:shadow transition duration-150 w-5/6 bg-white text-gray-500 hover:text-gray-800 px-4 py-2" onClick={()=> {signIn("google")}}>
         <div className="flex justify-center">
           <img className="w-6 h-6" src="https://www.svgrepo.com/show/475656/google-color.svg" loading="lazy" alt="google logo" />
           <span className="">Login with Google</span>
+        </div>
+    </button>
+    </div>
+    <div className="w-full h-4"></div>
+    <div className="flex justify-center">
+    <button className="border border-slate-200 dark:border-slate-700 rounded-lg hover:border-slate-400 dark:hover:border-slate-500 hover:shadow transition duration-150 w-5/6 bg-white text-gray-500 hover:text-gray-800 px-4 py-2" onClick={()=> {signIn("github")}}>
+        <div className="flex justify-center">
+          <img className="w-6 h-6" src="/github-color-svgrepo-com.svg" loading="lazy" alt="google logo" />
+          <span className="">Login with Github</span>
         </div>
     </button>
     </div>
