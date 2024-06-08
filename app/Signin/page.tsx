@@ -1,8 +1,14 @@
 "use client"
 import React from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const Signin = () => {
+  const { data: session } = useSession()
+  if(session){
+    const router = useRouter();
+    router.push('/profile');
+  }
   return (
     <div className="w-full h-full bg-emerald-100">
 
