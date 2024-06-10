@@ -13,7 +13,8 @@ const Navbar = ({ toggle }: { toggle: () => void}) => {
             <>
                 {/* Signed in as {session.user?.email} <br/>
                 <button onClick={()=> signOut()}>Sign Out</button> */}
-                <div className="w-full h-20 bg-emerald-800 sticky top-1 rounded-xl opacity-90 z-50">
+                
+                <div className="w-full h-20 border bg-emerald-800 border-gray-700 shadow-gray-600/10 shadow-none sticky top-1 rounded-xl opacity-90 z-50">
                     <div className="mx-auto px-5 h-full">
                         <div className="flex items-center h-full justify-between">
                             {/* Justify between bkc */}

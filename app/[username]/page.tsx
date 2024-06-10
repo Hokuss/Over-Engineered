@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const profile = ({params}:{params:any}) => {
     return (
@@ -16,34 +17,36 @@ const profile = ({params}:{params:any}) => {
                         </div>
                         <div className="text-center">
                             <h3 className="text-4xl font-semibold leading-normal mb-2">
-                            Jenna Stones
+                            {params.username}
                             </h3>
                             <div className="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
                             <i className="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>
                             Los Angeles, California
                             </div>
-                            <div className="mb-2 text-blueGray-600 mt-10">
+                            <div className="mb-2 mt-10">
                             <i className="fas fa-briefcase mr-2 text-lg text-blueGray-400"></i>Solution Manager - Creative Tim Officer
                             </div>
-                            <div className="mb-2 text-blueGray-600">
+                            <div className="mb-2">
                             <i className="fas fa-university mr-2 text-lg text-blueGray-400"></i>University of Computer Science
                             </div>
                             <div className="w-full justify-center">
-                                <div className="flex justify-center py-4 pl-8">
-                                    <div className="mr-4 p-3 text-center">
-                                    <span className="text-xl font-bold block uppercase tracking-wide text-blueGray-600">22</span><span className="text-sm text-blueGray-400">Friends</span>
+                                <div className="flex justify-center py-4 pr-5">
+                                    <div className="mr-2 p-3 text-center">
+                                    <span className="text-xl font-bold block uppercase tracking-wide">22</span><span className="text-sm text-blueGray-400">Subscribers</span>
                                     </div>
                                     <div className="mr-4 p-3 text-center">
-                                    <span className="text-xl font-bold block uppercase tracking-wide text-blueGray-600">10</span><span className="text-sm text-blueGray-400">Photos</span>
+                                    <span className="text-xl font-bold block uppercase tracking-wide">10</span><span className="text-sm text-blueGray-400">Articles</span>
                                     </div>
                                     <div className="lg:mr-4 p-3 text-center">
-                                    <span className="text-xl font-bold block uppercase tracking-wide text-blueGray-600">89</span><span className="text-sm text-blueGray-400">Comments</span>
+                                    <span className="text-xl font-bold block uppercase tracking-wide">89</span><span className="text-sm text-blueGray-400">Loves</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="flex justify-center pt-4">
-                            <button className="bg-indigo-950 rounded-lg text-white py-2 px-3">Subscribe</button>
+                            <Link href = {"/" + params.username + "/payments"} >
+                                <button className="bg-indigo-950 rounded-lg text-white py-2 px-3">Subscribe</button>
+                            </Link>
                         </div>
                         <div className="mt-10 py-10 border-t border-blueGray-200 text-center">
                             <div className="flex flex-wrap justify-center">
@@ -55,7 +58,7 @@ const profile = ({params}:{params:any}) => {
                                 warm, intimate feel with a solid groove structure. An
                                 artist of considerable range.
                                 </p>
-                                <a href="#pablo" className="font-normal text-pink-500">Show more</a>
+                                <Link href={params.username + "/articles"} className="font-normal text-pink-500">Show Articles</Link>
                             </div>
                             </div>
                         </div>
