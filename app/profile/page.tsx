@@ -24,7 +24,7 @@ const profile = () => {
                 {/* <!-- FullName --> */}
                 <h1
                     className="w-full text-left my-4 sm:mx-4 xs:pl-4 text-gray-800 dark:text-white lg:text-4xl md:text-3xl sm:text-3xl xs:text-xl font-serif">
-                    {session!.user?.name}</h1>
+                    @{session!.user?.name}</h1>
 
             </div>
 

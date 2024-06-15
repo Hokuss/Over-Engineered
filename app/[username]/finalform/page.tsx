@@ -6,8 +6,7 @@ import Link from "next/link";
 
 const finalform = ({params} : {params:any}) => {
   const router = useSearchParams()
-  const amt = router.get('amount')
-  const Price:Number = +amt!
+  const Price = router.get('amount')
     return (
         <>
           <section className="bg-gray-800 py-8 dark:bg-gray-800 md:py-4">
@@ -102,7 +101,7 @@ const finalform = ({params} : {params:any}) => {
 
                       <div>
                         <label htmlFor="your_email" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"> Subscription Amount* </label>
-                        <input type="email" id="your_email" className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" value={Price} required disabled />
+                        <input type="email" id="your_email" className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder:text-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500" value={Price!} required disabled />
                       </div>
 
                       <div>
@@ -146,12 +145,12 @@ const finalform = ({params} : {params:any}) => {
 
                       <dl className="flex items-center justify-between gap-4 py-3">
                         <dt className="text-base font-normal text-gray-500 dark:text-gray-400">Tax</dt>
-                        <dd className="text-base font-medium text-gray-900 dark:text-white">${0.1*Price}</dd>
+                        <dd className="text-base font-medium text-gray-900 dark:text-white">$0</dd>
                       </dl>
 
                       <dl className="flex items-center justify-between gap-4 py-3">
                         <dt className="text-base font-bold text-gray-900 dark:text-white">Total</dt>
-                        <dd className="text-base font-bold text-gray-900 dark:text-white">${1.1*Price}</dd>
+                        <dd className="text-base font-bold text-gray-900 dark:text-white">${Price}</dd>
                       </dl>
                     </div>
                   </div>
