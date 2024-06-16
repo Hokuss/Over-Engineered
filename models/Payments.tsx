@@ -9,7 +9,8 @@ const paymentSchema = new Schema({
     amount: {type:Number, required: true},
     createddat: {type: Date, default: Date.now},
     updatedat: {type: Date, default: Date.now},
-    cone: {type:Boolean, default: false}
+    cone: {type:Boolean, default: false},
+    paymentID: {type:String, required: true}
 });
 
 export default mongoose.models.Payment || mongoose.model("Payment", paymentSchema)
