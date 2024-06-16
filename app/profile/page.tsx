@@ -9,7 +9,7 @@ const profile = () => {
         const router = useRouter();
         router.push('/Signin');
     }
-    return (
+    else return (
         <div className="w-full overflow-hidden bg-indigo-950">
         <div className="flex flex-col">
             {/* <!-- Cover Image --> */}

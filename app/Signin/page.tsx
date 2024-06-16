@@ -9,7 +9,7 @@ const Signin = () => {
     const router = useRouter();
     router.push('/profile');
   }
-  return (
+  else return (
     <div className="w-full h-full bg-emerald-100">
 
   <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
